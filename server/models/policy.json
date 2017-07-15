@@ -1,0 +1,41 @@
+{
+  "name": "policy",
+  "plural": "policies",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "amountInsured": {
+      "type": "number",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "inceptionDate": {
+      "type": "date",
+      "required": true
+    },
+    "installmentPayment": {
+      "type": "boolean",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "client": {
+      "type": "belongsTo",
+      "model": "client",
+      "foreignKey": "clientId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

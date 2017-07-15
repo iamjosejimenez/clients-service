@@ -1,0 +1,37 @@
+{
+  "name": "client",
+  "plural": "clients",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "policies": {
+      "type": "hasMany",
+      "model": "policy",
+      "foreignKey": "clientId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
