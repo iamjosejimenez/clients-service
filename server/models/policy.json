@@ -2,14 +2,15 @@
   "name": "policy",
   "plural": "policies",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
     "id": {
       "type": "string",
-      "required": true
+      "required": true,
+      "id": true
     },
     "amountInsured": {
       "type": "number",
