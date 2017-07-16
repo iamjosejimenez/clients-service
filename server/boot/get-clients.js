@@ -1,5 +1,5 @@
 'use strict';
 
-const {downloadData} = require('../scripts/data-downloader.js');
+const {downloadData} = require('../services/data-downloader.js');
 
 module.exports = downloadData;

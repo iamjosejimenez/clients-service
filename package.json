@@ -18,9 +18,11 @@
     "loopback": "^3.0.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^4.0.0",
+    "morgan": "^1.8.2",
     "request": "^2.81.0",
     "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^2.0.0"
+    "strong-error-handler": "^2.0.0",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "eslint": "^3.17.1",
