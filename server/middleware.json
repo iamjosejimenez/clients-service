@@ -31,7 +31,9 @@
     }
   },
   "session": {},
-  "auth": {},
+  "auth": {
+    "./middleware/authentication": {}
+  },
   "parse": {},
   "routes": {
     "loopback#rest": {
@@ -45,6 +47,7 @@
     "loopback#urlNotFound": {}
   },
   "final:after": {
+    "./middleware/error-logger": {},
     "strong-error-handler": {}
   }
 }

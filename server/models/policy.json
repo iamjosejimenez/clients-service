@@ -9,8 +9,8 @@
   "properties": {
     "id": {
       "type": "string",
-      "required": true,
-      "id": true
+      "id": true,
+      "required": true
     },
     "amountInsured": {
       "type": "number",

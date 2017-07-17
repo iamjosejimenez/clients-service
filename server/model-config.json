@@ -20,5 +20,17 @@
   "policy": {
     "dataSource": "db",
     "public": true
+  },
+  "role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "roleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "acl": {
+    "dataSource": "db",
+    "public": false
   }
 }
