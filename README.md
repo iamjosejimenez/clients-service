@@ -19,4 +19,4 @@ To see the list of endpoints and their responses just access the route **GET/exp
 *  To get the user linked to a policy number **GET /policies/{id}/client**
 
 ## Testing
-Execute `npm test` To run unit tests. 
+Execute `npm test` to run unit tests. 
