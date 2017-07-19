@@ -17,3 +17,6 @@ To see the list of endpoints and their responses just access the route **GET/exp
 *  To get user data based on user name **GET /clients?filter[where][name]={name}**
 *  To get the list of policies linked to a user name **GET /clients?filter[where][name]={name}&filter[include]=policies**
 *  To get the user linked to a policy number **GET /policies/{id}/client**
+
+## Testing
+Execute `npm test` To run unit tests. 
