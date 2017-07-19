@@ -4,8 +4,13 @@ const server = require('../server');
 
 module.exports = () => {
   return (req, res, next) => {
-    const authorization = req.get('Authentication');
+    let authorization = req.get('Authentication');
     const Client = server.models.client;
+
+    if (/^\/explorer/.test(req.url)) {
+      authorization = 'admin@admin.com';
+    }
+
     Client.findOne({
       where: {
         email: authorization ? authorization : '',

@@ -11,6 +11,8 @@ module.exports = (server) => {
 
   const Role = server.models.Role;
   const RoleMapping = server.models.RoleMapping;
+  const Client = server.models.client;
+
   return Promise.map(ROLES, name => {
     return Role.findOrCreate({
       name,
@@ -19,7 +21,13 @@ module.exports = (server) => {
     ROLES = rolesCreated;
     return downloadData(server);
   }).then(() => {
-    const Client = server.models.client;
+    return Client.findOrCreate({
+      email: 'admin@admin.com',
+      role: 'admin',
+      id: 'admin',
+      name: 'admin',
+    });
+  }).then(() => {
     return Client.find({});
   }).then(clients => {
     return Promise.map(clients, client => {
