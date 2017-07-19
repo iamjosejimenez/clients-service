@@ -8,13 +8,12 @@ module.exports = () => {
     const Client = server.models.client;
     Client.findOne({
       where: {
-        email: authorization,
+        email: authorization ? authorization : '',
       },
     }, (error, client) => {
       if (error) {
         return next(error);
       }
-
       if (!client) {
         const authorizationError = new Error('Unauthorized');
         authorizationError.status = 401;
